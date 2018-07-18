@@ -39,3 +39,18 @@ function exercise12 (number) {
 }// kiểm tra từng số một rồi cộng lại ra dc bnhieu số 0.
 console.log(exercise12(123456789));
 ```
+Cách 2:  
+```
+function factorial(number){
+  var count = 0;
+  for(let i = 1; Math.pow(5,i) <= number; i++){
+    for(let j = 5; j<= number; j+=5){ 
+      if(j%(Math.pow(5,i)) == 0){
+        count++;
+      }
+    }
+  }
+  return count;
+}
+console.log(factorial(123456789));
+```
