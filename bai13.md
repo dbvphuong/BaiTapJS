@@ -27,8 +27,12 @@ Output: false
 Task:  
 ```
 function power (number){
- for(let A = 1; A <= Math.sqrt(number); A++){
-    for(let P = 1; P <= number; P++){
+  if(number == 1){
+    console.log(1,1);
+    return true;
+  }
+ for(let A = 2; A <= Math.sqrt(number); A++){
+    for(let P = 2; Math.pow(A, P) <= number; P++){
       if(Math.pow(A, P) == number){
         console.log(A, P);
         return true;    
@@ -37,5 +41,5 @@ function power (number){
   }
   return false;
 }
-console.log(power (1211));
+console.log(power (12312415342));
 ```
