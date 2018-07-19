@@ -28,7 +28,7 @@ Task:
 ```
 function power (number){
  for(let A = 1; A <= Math.sqrt(number); A++){
-    for(let P = 1; P <= A; P++){
+    for(let P = 1; P <= number; P++){
       if(Math.pow(A, P) == number){
         console.log(A, P);
         return true;    
