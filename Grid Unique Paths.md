@@ -20,3 +20,15 @@ function uniquePaths (bottom, right){
 }
 console.log(uniquePaths(15,9));
 ```
+Cách 2: đệ qui.  
+```
+function uniquePaths (i,j){
+    if(i == 1 || j == 1){
+        return 1;
+    }
+    var a =  uniquePaths(i-1 ,j) + uniquePaths(i , j- 1); 
+// số cách đến vị trí (i,j) = số cách đến vị trí (i-1,j) + số cách đến vị trí(i,j-1)
+    return a;
+}
+console.log(uniquePaths(1,9));
+```
