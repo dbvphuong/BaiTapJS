@@ -26,3 +26,27 @@ Output : 81
 TASK:  
 1. là một thuật toán dùng để tìm kiếm phần tử trong một danh sách đã sắp xếp  
 2,3. Cách thực hiện là dùng đệ qui(gọi chỉnh nó trong function của nó) nên nếu phải dùng hơn 10000 lần gọi thì sẽ không chạy đc  
+```
+
+function binarySearch(array, value) {
+    var average,
+        min = 0,
+        max = array.length - 1;
+        count = 0;
+    while (min <= max){
+        average = Math.floor((min + max) /2);
+        if (array[average] === value){
+            count++ ;
+            array.splice(average,1);
+        }
+        else if (array[average] < value){
+            min = average + 1;
+        }
+        else
+            max = average - 1;
+    }
+    return count;
+
+}
+console.log(binarySearch([7,7,8,8,8,8,8,8,10],8));
+```
