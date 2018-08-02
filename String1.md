@@ -6,7 +6,27 @@ Example:
 "A man, a plan, a canal: Panama" is a palindrome.  
 "race a car" is not a palindrome.  
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem  
-
+```
+function palinDrome (str){
+  var str = str.replace(/,/g, ""); // thay dấu , bằng rỗng.
+  var str = str.replace(/:/g, ""); // thay dấu : bằng rỗng.
+  var str = str.replace(/ /g,""); // thay dau cach bang rong
+  var str  = str.toLowerCase();
+  var arr = str.split("");
+  var arr1 = arr.slice();
+  for (let i = 0; i < arr.length; i++){
+    arr[i] = arr1[arr.length - 1 - i]
+  }
+  
+  if (arr.join() ===  arr1.join()){
+    return "String is a palindrome"
+  }
+  else 
+  return "String is not a palindrome";
+}
+console.log(palinDrome("race a car"));
+console.log(palinDrome("A man, a plan, a canal: Panama"));
+```
 
 Bài 2:  
 Reverse the String  
