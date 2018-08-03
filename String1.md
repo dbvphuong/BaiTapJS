@@ -40,13 +40,13 @@ If there are multiple spaces between words, reduce them to a single space in the
 ```
 function reverseString (str){
   var arr = str.split(" ");
-  var arr1 = arr.slice();
-  for (let i = 0; i < arr.length; i++){
-    if (arr[i] == "") {
-      arr1.splice(i,i+1);
+  var arr1 = [];
+  for (let i = arr.length - 1; i >= 0; i--){
+    if (arr[i] !== "") {
+      arr1.push(arr[i]);
     }
   }
-  arr1.join(" ");
+  arr1 = arr1.join(" ");
   return arr1;
 }
 console.log( reverseString ("the sky is   blue"));
