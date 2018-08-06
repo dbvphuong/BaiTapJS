@@ -8,11 +8,21 @@ Example:
 Return 0 / 1 ( 0 for false, 1 for true ) for this problem  
 ```
 function palinDrome (str){
-  var str = str.replace(/,/g, ""); // thay dấu , bằng rỗng.
-  var str = str.replace(/:/g, ""); // thay dấu : bằng rỗng.
-  var str = str.replace(/ /g,""); // thay dau cach bang rong
-  var str  = str.toLowerCase();
+  var str = str.toLowerCase();
   var arr = str.split("");
+  for (let i = 0; i < arr.length; i++){
+    if(arr[i] === ","){
+      arr[i] = undefined;
+    }
+    else if(arr[i] === ":"){
+      arr[i] = undefined;
+    }
+    else if(arr[i] === " "){
+      arr[i] = undefined;
+    }
+  }
+// Bỏ dấu , : cách đi.
+  arr = arr.join("").split("");
   var arr1 = arr.slice();
   for (let i = 0; i < arr.length; i++){
     arr[i] = arr1[arr.length - 1 - i]
