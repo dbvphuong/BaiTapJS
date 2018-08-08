@@ -29,7 +29,7 @@ function stringPalindromic(str){
   var arr = str.split("");
   var arr1 = [];
   var arr2 = [];
-  for (let i = arr.length; i >= 0; i--){
+  for (let i = 0; i <= arr.length; i++){
      arr1.unshift(arr.slice(i, arr.length).reverse().concat(arr))
   }// arr1 gồm các arr con.
 
