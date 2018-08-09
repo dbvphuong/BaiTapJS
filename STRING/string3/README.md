@@ -1,10 +1,22 @@
-Minimum Characters required to make a String Palindromic  
-You are given a string. The only operation allowed is to insert characters in the beginning of the string.  
-How many minimum characters are needed to be inserted to make the string a palindrome string
+Implement strStr(string, substring).  
+strstr(string, substring) - locate a substrin in a string  
+ 
+Returns the index of the first occurrence of needle in haystack, or -1 if needle is not part of haystack.  
+Example 1:  
 ```
-Example:
-Input: ABC
-Output: 2
-Input: AACECAAAA
-Output: 2
+          "input": string = "AABBACAADAABAABA",  substring = "AABA",
+          "output": 9
+ ```
+Example 2:  
+```
+          "input":
+              string = "bbaabbbbbaabbaabbbbbbabbbabaabbbabbabbbbababbbabbabaaababbbaabaaaba",
+              substring = "babaaa"
+            "output": 48
+ ```
+Example 3:  
+```
+          "input": string = "aabaaaababaabbbabbabbbaabababaaaaaababaaabbabbabbabbaaaabbbbbbaabbabbbbbabababbaaabbaabbbababbb",
+               substring = "bba",
+          "output": 13
 ```
