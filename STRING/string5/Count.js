@@ -12,7 +12,7 @@ function count (str,n){
             if(j ==arr.length + 1){
                 i = 0;
                 j = 0;
-                arr = arr1.slice();
+                arr = arr1;
                 arr1 = [];
                 count++;
             }
@@ -28,7 +28,7 @@ function count (str,n){
             if (j == arr.length + 1){
                 i = 0;
                 j = 1;
-                arr = arr1.slice();
+                arr = arr1;
                 arr1 = [];
                 count++;
             } 
