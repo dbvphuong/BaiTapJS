@@ -9,14 +9,14 @@ function count (str,n){
             arr1.push('1', arr[i]);
             i+=1;
             j+=1;
-            if(j ==arr.length + 1){
+            if(j == arr.length + 1){
                 i = 0;
                 j = 0;
                 arr = arr1;
                 arr1 = [];
                 count++;
             }
-        } /* nếu số arr[i]=arr[i+1] thì thêm arr[i] vào arr1,
+        } /* nếu số arr[i] != arr[i+1] thì thêm arr[i] vào arr1,
              nếu số arr[i] là số cuối thì count++ và bắt đầu lại vòng while*/
         else if (arr[i] === arr[i+1] && arr[i] === arr[j]){
             j+=1;
