@@ -18,7 +18,6 @@ function binaryString(a,b){
         }
     }
     let i = a.length - 1;
-    let j = a.length - 1;
     let note = 0;
     var plus = new Array(a.length).fill(0);
     while (i >= 0){
