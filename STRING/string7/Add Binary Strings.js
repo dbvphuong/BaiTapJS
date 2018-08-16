@@ -1,52 +1,54 @@
 function binaryString(a,b){
-    var a = a.toString().split('');
-    var b = b.toString().split('');
-    var minus = a.length - b.length;
-    var arr;
+    let minus = a.length - b.length;
+    let str = '0';
+    let note = 0;
+    let plus = '';
+
     if (minus > 0){
-        arr = new Array(minus + 1).fill(0);
-        a.unshift("0");
-        for (let i = 0; i < arr.length ; i++){
-            b.unshift(arr[i]);
+        for (let i = 0; i < minus ; i++){
+            str = '0' + str;
         }
+        b = str + b;
+        a = '0' + a;
+    }
+    else if (minus < 0){
+        for (let i = 0; i < -minus ; i++){
+            str = '0' + str;
+        }
+        a = str + a;
+        b = '0' + b;
     }
     else {
-        arr = new Array(- minus + 1).fill(0);
-        b.unshift("0");
-        for (let i = 0; i < arr.length ; i++){
-            a.unshift(arr[i]);
-        }
-    }
+        a = '0' + a;
+        b = '0' + b;
+    }// Tạo string a,b trên cơ sở a,b cũ có chiều dài bằng nhau
+
     let i = a.length - 1;
-    let note = 0;
-    var plus = new Array(a.length).fill(0);
     while (i >= 0){
         if (a[i] == 0 && b[i] == 0){
-            plus[i] = note;
+            plus = note + plus;
             note = 0;
             i--
         }
         else if (a[i] == 1 && b[i] == 1){
-            plus[i] = note;
+            plus = note + plus;
             note = 1;
             i--
         }
         else if (a[i] != b[i] && note == 0){
-            plus[i] = 1;
+            plus = '1' + plus;
             note = 0;
             i--
         }
         else if (a[i] != b[i] && note == 1){
-            plus[i] = 0;
+            plus = '0' + plus;
             note = 1;
             i--
         }
     }
-    
-    if (plus[0] == 0){
-        plus.shift();
+    if (plus[0] == '0'){
+        plus = plus.substr(1);
     }
-    plus = plus.join('');
     return plus;
 }
 console.log(binaryString('100','11'));
