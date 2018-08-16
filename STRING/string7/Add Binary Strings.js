@@ -3,6 +3,10 @@ function binaryString(a,b){
     var b = b.toString().split('');
     var minus = a.length - b.length;
     var arr;
+    let i = a.length - 1;
+    let j = a.length - 1;
+    let note = 0;
+    var plus = new Array(a.length).fill(0);
     if (minus > 0){
         arr = new Array(minus + 1).fill(0);
         a.unshift("0");
@@ -17,10 +21,7 @@ function binaryString(a,b){
             a.unshift(arr[i]);
         }
     }
-    let i = a.length - 1;
-    let j = a.length - 1;
-    let note = 0;
-    var plus = new Array(a.length).fill(0);
+
     while (i >= 0){
         if (a[i] == 0 && b[i] == 0){
             plus[i] = note;
