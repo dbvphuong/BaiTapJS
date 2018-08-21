@@ -9,7 +9,7 @@ function sumBits (arr) {
         let x = arr[i];
         arr1.push(x.toString(2));
     }// chuyển sang nhị phân
-    let max = arr1[arr1.length - 1].length;
+    const max = arr1[arr1.length - 1].length;
     for (let i = 0; i < arr1.length; i++){
         if (arr1[i].length < max){
             arr1[i] = new Array(max - arr1[i].length).fill(0).join('') + arr1[i]
