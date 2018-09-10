@@ -22,7 +22,7 @@ function sum(a,b){
     else {
         a = '0' + a;
         b = '0' + b;
-    }// Tạo string a,b trên cơ sở a,b cũ có chiều dài bằng nhau
+    }
 
     let i = a.length - 1;
     while (i >= 0){
