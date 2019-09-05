@@ -22,6 +22,7 @@ Trả về true nếu tồn tại chỉ số i thoả mãn yêu cầu, false n�
 
 
 Bài làm:
+```
 function isTwoSameSequences(arr){
     var a = false
     sum = (a,b)=>a+b;
@@ -33,3 +34,4 @@ function isTwoSameSequences(arr){
     }
     return a;
 }
+```
